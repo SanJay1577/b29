@@ -1,9 +1,20 @@
-* {
+*,
+*::before,
+*::after {
   padding: 0;
   margin: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
 ul {
   list-style-type: none;
+  z-index: 999;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -16,23 +27,25 @@ ul {
   position: fixed;
   top: auto;
   bottom: 0;
-  width: 95%;
+  width: 100%;
+  background-color: bisque;
 }
-li {
+li > a {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 li:hover {
   border: none;
   color: rgb(216, 124, 12);
 }
-
+img {
+  object-fit: contain;
+}
 .section {
-  border: 1px solid black;
-  width: 100vw;
+  width: 90vw;
   height: 90vh;
   display: flex;
   justify-content: center;
@@ -42,9 +55,67 @@ li:hover {
 
 .all-section {
   margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+}
+.home-layout {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.left-content {
+  width: 100%;
+}
+.right-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
 }
 
+.image-content > img {
+  width: 100%;
+  height: 30vh;
+}
+.head-name {
+  height: 5vh;
+  display: grid;
+  place-items: center;
+  font-size: 50px;
+  font-weight: bolder;
+}
+.content-sec {
+  height: 20vh;
+}
+.icon-logo {
+  width: 50px;
+  cursor: pointer;
+}
+.btn {
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+.util-box {
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
 @media (min-width: 720px) {
+  .home-layout {
+    width: 80vw;
+  }
   .isMobile {
     display: none;
   }
@@ -64,5 +135,12 @@ li:hover {
   }
   .section {
     height: 80vh;
+  }
+  .home-layout {
+    flex-direction: row;
+  }
+  .content-sec {
+    font-size: 20px;
+    width: 500px;
   }
 }
