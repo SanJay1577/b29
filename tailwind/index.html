@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind CSS</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --color-clifford: #16537e;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="text-3xl text-blue-600/100 dark:text-sky-400/100 bg-blue-500">
+      The quick brown fox...
+    </p>
+    <p class="text-3xl text-blue-600/75 dark:text-sky-400/75 bg-clifford">
+      The quick brown fox...
+    </p>
+    <p class="text-3xl text-blue-600/50 dark:text-sky-400/50">
+      The quick brown fox...
+    </p>
+    <p class="text-3xl text-blue-600/25 dark:text-sky-400/25 text-clifford">
+      The quick brown fox...
+    </p>
+
+    <button
+      class="text-9xl subpixel-antialiased cursor-pointer p-2 m-2 w-96 rounded-lg h-48"
+    >
+      Save
+    </button>
+    <p class="text-base/10 p-2 border-6 border-sky-700">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi accusamus
+      accusantium deleniti blanditiis et ipsum provident velit explicabo cumque
+      corporis quaerat voluptates modi corrupti ad nam quos, quas eligendi
+      necessitatibus. Reiciendis minus ipsam natus at nisi est commodi ullam
+      similique tempore cum! Odio, cupiditate! Porro eligendi autem corrupti eum
+      sapiente dignissimos iste illo, ipsam nam tenetur quis temporibus ipsum
+      quas. Est quas, consequatur recusandae nihil saepe quam harum consequuntur
+      cupiditate eum nisi nulla totam, facere libero. Esse culpa sed sit quidem
+      quo distinctio sunt animi, accusantium voluptates. Voluptatem, hic
+      incidunt?
+    </p>
+
+    <div class="mask-t-from-70% bg-[url(./assets.jpg)] h-96"></div>
+  </body>
+</html>

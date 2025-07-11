@@ -11,6 +11,9 @@ a {
   text-decoration: none;
   color: black;
 }
+.section > div > img {
+  width: 20px;
+}
 ul {
   list-style-type: none;
   z-index: 999;
@@ -142,5 +145,8 @@ img {
   .content-sec {
     font-size: 20px;
     width: 500px;
+  }
+  .right-content {
+    gap: 5rem;
   }
 }
