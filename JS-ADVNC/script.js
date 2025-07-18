@@ -54,3 +54,63 @@ console.log(anchorElement);
 //nothing will be returend (undefined) // multiple nodes
 //can be appended
 document.body.append(newContainer, anchorElement);
+
+const input = document.querySelector("input");
+const toogleBtn = document.querySelector("#pass-check");
+
+function toogleEvent() {
+  const inputType = input.getAttribute("type");
+  if (inputType == "password") {
+    input.setAttribute("type", "text");
+    toogleBtn.innerText = "Hide";
+  } else {
+    input.setAttribute("type", "password");
+    toogleBtn.innerText = "Show";
+  }
+}
+
+toogleBtn.addEventListener("click", () => {
+  toogleEvent();
+});
+
+function getAndInvoke(nameOfFN, fn) {
+  //     fn =  () => {
+  //   someFn("sanjay");
+  // }
+  //()=>{}
+  // someFn()
+  console.log(nameOfFN); // tickFn
+  fn(); //()=>{}
+}
+
+function someFn(name) {
+  console.log("someFn is called by", name);
+}
+getAndInvoke("tickFn", () => {
+  someFn("PRAVEEN");
+}); // nameOfFN, fn
+
+//mouse events (mouseup, mousedown, mousehover)
+document.addEventListener("mouseup", () => {
+  console.log("event mouses triggerd");
+});
+//form event (change, submit, input)
+const myForm = document.querySelector("form");
+myForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  console.log("input has been triggerd in form");
+});
+//key events (keypress, keydown, keyup)
+document.addEventListener("keyup", (e) => {
+  console.log("Key event triggred", e.key);
+});
+//window events - (load, resize)
+window.addEventListener("resize", (e) => {
+  console.log(
+    "resizing the app",
+    "height:",
+    e.target.innerHeight,
+    "width:",
+    e.target.innerWidth
+  );
+});
